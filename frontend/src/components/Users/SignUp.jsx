@@ -69,23 +69,25 @@ const SignUp = () => {
     
     {/* main section */}
 
-    <div className='flex md:justify-center overflow-hidden'>
+    <div className='flex justify-center '>
 
-        <div className='md:flex flex-col'>
+        <div className='md:flex flex-col px-8 md:px-0'>
 
         {/* gift div */}
-       <div className='bg-[#FFE9E0] h-12 flex gap-2 items-center p-8 md:pr-48 rounded-lg '>
+       <div className='bg-[#FFE9E0] h-12 flex gap-2 items-center 
+       p-8 md:pr-48 
+       rounded-lg '>
        <span>🎂  Get up to</span>
        <h2 className='font-bold '>US$20 welcome perks! </h2>
        </div>
      
      {/* inputs div */}
       
-      <form onSubmit={handleSubmit} className='mt-8 '>
+      <form onSubmit={handleSubmit} className='mt-8  '>
 
-      <label className='flex gap-2 items-center mb-4'>
-      *Country / Region:
-     <select className='w-96 py-2 border border-gray-400 px-2'>
+      <label className='md:flex  gap-2 items-center mb-4 px-4 md:px-0'>
+      <p className='mb-4 md:mb-0'>  *Country / Region:</p>
+     <select className='md:w-96 w-full py-2 border rounded-md border-gray-400 px-2'>
         <option>Ethiopia</option>
         <option>somalia</option>
         <option>kenya</option>
@@ -95,22 +97,22 @@ const SignUp = () => {
      </label>
        
        {/* email iyo passord */}
-       <label className='flex px-[79px] gap-4 mb-4 items-center '>
-        email: 
+       <label className='md:flex md:px-[79px] gap-4  mb-4  items-center '>
+       <p  className='mt-2 md:mt-0'> email:</p>  
         <input type="text"
          placeholder='enter your email'
-         className='w-96 py-2 border border-gray-400 px-2 text-lg'
+         className='md:w-96 w-full py-2 border mt-2 md:mt-auto rounded-md border-gray-400 px-2 text-lg'
          name='email'
          onChange={handleChange}
          />
        </label>
 
 
-       <label className='flex px-[55px] gap-4 mb-4 items-center '>
-        password: 
+       <label className='md:flex md:px-[55px] gap-4 mb-4 items-center '>
+       <p  className='mt-2 md:mt-0'> password:</p>  
         <input type="password"
          placeholder='enter your Password'
-         className='w-96 py-2 border border-gray-400 px-2 text-lg'
+         className='md:w-96 w-full py-2 mt-2 border rounded-md border-gray-400 px-2 text-lg'
          name='password'
          onChange={handleChange}
          />
@@ -118,15 +120,15 @@ const SignUp = () => {
 
 
        {/* phone */}
-       <label className='flex px-[55px] gap-4 mb-4 items-center '>
+       <label className='md:flex md:px-[55px] gap-4 mb-4 items-center '>
 
-        <div className='flex px-[60px] space-x-6'>
+        <div className='flex md:px-[60px] space-x-6 mt-6 md:mt-auto'>
          
           <div className='text-1xl flex gap-4 items-center'>
           Tel: 
         <input type="text"
          placeholder='+2519'
-         className='w-24 py-2 border border-gray-400 px-2 text-lg'
+         className='md:w-24 w-12 py-2 border rounded-md border-gray-400 px-2 text-lg'
          />
           </div>
          
@@ -134,7 +136,7 @@ const SignUp = () => {
       
         <input type="text"
          placeholder='enter your Phone number'
-         className='w-[250px] py-2 border border-gray-400 px-2 text-lg'
+         className='md:w-[250px] w-full py-2 border rounded-md border-gray-400 px-2 text-lg'
          />
           </div>
         </div>

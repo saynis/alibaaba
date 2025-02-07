@@ -60,7 +60,7 @@ const Login = () => {
           <p className='text-2xl text-white font-semibold'>unlock us 20$ per weeks for new sales</p>
         </div>
         
-        <div className='bg-white p-8 mr-8 w-[450px] rounded-lg mt-12'>
+        <div className='bg-white p-8 mr-8 md:w-[450px] w-full rounded-lg mt-12'>
          <div>
          <label className='text-1xl font-bold' >Email</label>
          <br />

@@ -13,7 +13,7 @@ const OneProduct = ({products}) => {
     
         <div className='bg-white shadow-md rounded-md p-4'>
        <img
-       className='w-full h-48 '
+       className='md:w-full w-12 h-12 md:h-48 '
         src={product.image} alt="" />
         <h1 className='text-1xl font-bold mt-4 line-clamp-1 '>{product.title}</h1>
         <p className='mt-4 line-clamp-2'>{product.description}</p>

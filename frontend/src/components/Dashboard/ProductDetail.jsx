@@ -26,24 +26,24 @@ const ProductDetail = () => {
   return (
      product &&  <div>
       <Header/>
-      <div className='md:flex justify-between gap-4 px-24 p-8'>
+      <div className='md:flex justify-between gap-4 md:px-24 px-4 p-8'>
 
         {/* qaybta sawirka */}
       <div className='flex flex-col'>
       <button
       onClick={()=> navigate(-1) }
-       className='py-2 w-1/4 bg-[#ff6600e2] text-white rounded-full'>Go back</button>
+       className='py-2 md:w-1/4 w-full bg-[#ff6600e2] text-white rounded-full'>Go back</button>
      <h1 className='font-bold text-[18px] text-gray-600 mt-4'>Wholesale price High quality activewear for women manufacturers </h1>
      <p className='mt-4'>No reviews yet#15Most popular in Tension Strapsandyoga Ropes</p>
      <p className='mt-2 bg-[#f8f8f8] p-2'>company-logoBeijing Bid Ace Co., Ltd.20 yrsCN</p>
      <img 
-     className='mt-8 w-1/2  object-cover border-x-8 border-[#f8f8f8]  '
+     className='mt-8 md:w-1/2 w-full  object-cover border-x-8 border-[#f8f8f8]  '
      src={product.image} alt="" />
    
       </div>
         
         {/* qaybat price ka */}
-        <div className='bg-white shadow-lg p-4 w-1/3'>
+        <div className='bg-white shadow-lg p-4 md:w-1/3 w-full'>
         <div className='flex gap-16'>
           <span>500 - 999 pieces</span>
           <span>500 - 999 pieces</span>
