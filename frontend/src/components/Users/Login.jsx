@@ -87,8 +87,8 @@ const Login = () => {
           <button type='submit' className='w-full px-4 py-2 bg-[#ff6600e2] rounded text-white font-bold mt-2'>SignIn</button>
 
           <div className='flex justify-between text-blue-500 mt-4 capitalize'>
-            <span>mobile number sign</span>
-            <span>Create account</span>
+            <Link to="/SignUp"> <span>mobile number sign</span> </Link>
+            <Link to="/SignUp"><span>Create account</span> </Link>
           </div>
 
           <hr className='mt-4 border border-gray-700'/>

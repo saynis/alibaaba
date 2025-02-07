@@ -6,6 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { IoMenuSharp } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
@@ -24,6 +25,8 @@ const Header = () => {
     setMenuClik(true)
    
   }
+
+  const navigate = useNavigate()
   
   return (
     <div className='shadow-md bg-white pb-4 relative  '>
@@ -64,9 +67,9 @@ const Header = () => {
           
         </ul>
         <CiShoppingCart className='text-2xl font-bold md:flex hidden' />
-        <span className='flex gap-2 mt-4 md:mt-0 items-center 
-         font-bold md:font-semibold text-[25px] md:text-xl'><CgProfile className='text-2xl' />Sign in</span>
-        <button className='px-5 py-2 mt-4 md:mt-0 bg-[#ff6600e2]  text-black font-semibold border-none rounded-lg'>Sign Up</button>
+        <button onClick={()=> navigate("/login")}
+        className='flex gap-2 items-center px-8 py-2 mt-4 md:mt-0 bg-[#ff6600e2]  text-black font-semibold border-none rounded-lg'>
+           <CgProfile className='text-2xl' /> <span>LogOut</span></button>
 
       </div>
 
