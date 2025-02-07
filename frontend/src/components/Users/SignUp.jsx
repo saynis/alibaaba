@@ -143,7 +143,7 @@ const SignUp = () => {
        </label>
            
            {/* button */}
-           <div className='mt-8 ml-36'>
+           <div className='mt-8 md:ml-36'>
           <button
           className='px-5 py-2 bg-[#ff6600e2] text-white font-bold text-lg rounded-lg border-none' 
           type="submit">Create account</button>

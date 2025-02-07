@@ -80,8 +80,6 @@ const ProductDetail = () => {
 
             <button className='bg-gray-300 py-1 px-4 rounded'>black</button>
 
-            <button className='bg-gray-300 py-1 px-4 rounded'>yellow</button>
-
            
 
           </div>

@@ -11,7 +11,7 @@ const Footer = () => {
 
   <div> 
 
-  <div className='bg-white px-16 p-16 '> 
+  <div className='bg-white md:px-16 px-6 p-16 '> 
     
     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
 
