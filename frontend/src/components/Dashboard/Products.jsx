@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import OneProduct from './OneProduct'
+import OneProduct from './Oneproduct'
 
 
 

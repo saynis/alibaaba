@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import Products from './products'
+import Products from './Products'
 import Footer from './Footer'
 
 
