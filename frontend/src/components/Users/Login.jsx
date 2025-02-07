@@ -12,29 +12,31 @@ const Login = () => {
   
    const navigate = useNavigate();
 
-  const handleChnage = (event)=>{
+  const handleChange = (event)=>{
      setFormData({...formData, [event.target.name]: event.target.value})
   }
   
   const handleSubmit = async(event)=>{
     event.preventDefault();
+    
+    if(!formData.email || !formData.password) {
+      toast.error("Email iyo password-ka waa in la buuxiyaa");
+      return;
+    }
+
     try {
       const response =  await axios.post(`${import.meta.env.VITE_API_URL}/api/users/login`,formData);
       const token = response.data.token;
-      if(formData.email || formData.password){
-        if(token){
-          localStorage.setItem("token", token)
-          navigate("/Home")
-        }else{
-          toast.error("email or passwor is incorrect")
-        }
+      if(token){
+        localStorage.setItem("token", token)
+        navigate("/Home")
       }else{
-        toast.error("connot be empty")
+        toast.error("Email ama password-ka waa khalad")
       }
        
      
     } catch (error) {
-      toast.error("surver is crashed")
+      toast.error("Server-ka ayaa xanuunsan")
     }
 
   }
@@ -65,7 +67,7 @@ const Login = () => {
           <input type="text-xl cap-talize" 
           className='py-2 w-full p-2 mb-2 mt-2 border border-gray-800  focus:outline-none'
           placeholder='enter Your email'
-          onChange={handleChnage}
+          onChange={handleChange}
           name='email'/>
           
          </div>
@@ -76,7 +78,7 @@ const Login = () => {
           <input type="text-xl cap-talize" 
           className='py-2 w-full p-2 mb-2 mt-2 border border-gray-800 focus:outline-none'
           placeholder='enter Your password'
-          onChange={handleChnage}
+          onChange={handleChange}
           name='password'
           />
          </div>

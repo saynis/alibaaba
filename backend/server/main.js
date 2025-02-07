@@ -9,15 +9,15 @@ dotenv.config()
 app.use(express.json())
 
 const corsOptions = {
-    origin: process.env.CLIENT_BASE_URL, // URL-ga frontend-kaaga
-    methods: ['GET', 'POST','PUT', 'DELETE'],
+    origin: 'https://alibaabawebsite.onrender.com', // URL-ka saxda ah ee frontend-ka
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: [
-      "Conten-Type",
+      "Content-Type",
     ],
-    credentials: true, // Allow credentials (cookies, headers, etc.)
-  };
+    credentials: true,
+};
   
-  app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
 import userRoute from '../routes/userRoute.js'
 app.use("/api/users/" , userRoute)

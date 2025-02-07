@@ -20,25 +20,41 @@ const SignUp = () => {
 
     const handleSubmit = async(event)=>{
      event.preventDefault();
+     
+     // Validate email and password
+     if(!formData.email || !formData.password){
+         toast.error("Fadlan buuxi dhammaan meelaha looga baahan yahay");
+         return;
+     }
+
+     // Basic email validation
+     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailRegex.test(formData.email)) {
+         toast.error("Fadlan geli email sax ah");
+         return;
+     }
+
+     // Password length validation
+     if (formData.password.length < 6) {
+         toast.error("Password-ku waa inuu ahaadaa ugu yaraan 6 xaraf");
+         return;
+     }
 
      try {
         const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/register`, formData)
         const token = response.data.token
-        if(formData.email || formData.password){
-           if(token){
-               navigate("/login")
-           }else{
-             toast.error("email all ready exists")
-           }
-        }else{
-           toast.error("canot be empty")
+        if(token){
+            toast.success("Si guul leh ayaad isugu diiwaangelisay");
+            navigate("/login")
         }
      } catch (error) {
-        toast.error("server is not running")
+        if(error.response?.data?.message) {
+            toast.error(error.response.data.message);
+        } else {
+            toast.error("Cilad ayaa dhacday, fadlan mar kale isku day");
+        }
      }
-     
-    
-    }
+}
 
   return (
     <div className=''>
