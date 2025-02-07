@@ -64,8 +64,8 @@ const Login = () => {
          <div>
          <label className='text-1xl font-bold' >Email</label>
          <br />
-          <input type="text-xl cap-talize" 
-          className='py-2 w-full p-2 mb-2 mt-2 border border-gray-800  focus:outline-none'
+          <input type="email" 
+          className='py-2 w-full p-2 mb-2 mt-2 border text-xl cap-talize border-gray-800  focus:outline-none'
           placeholder='enter Your email'
           onChange={handleChange}
           name='email'/>
@@ -75,8 +75,8 @@ const Login = () => {
          <div>
          <label className='text-1xl font-bold' >password</label>
          <br />
-          <input type="text-xl cap-talize" 
-          className='py-2 w-full p-2 mb-2 mt-2 border border-gray-800 focus:outline-none'
+          <input type="password" 
+          className='py-2 w-full p-2 mb-2 mt-2 border text-xl cap-talize border-gray-800 focus:outline-none'
           placeholder='enter Your password'
           onChange={handleChange}
           name='password'
