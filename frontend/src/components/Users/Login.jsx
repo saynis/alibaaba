@@ -36,7 +36,7 @@ const Login = () => {
     } catch (error) {
       toast.error("surver is crashed")
     }
-    console.log(token)
+
   }
 
   return (
