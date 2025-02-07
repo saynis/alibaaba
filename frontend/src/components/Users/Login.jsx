@@ -23,6 +23,7 @@ const Login = () => {
       const token = response.data.token;
       if(formData.email || formData.password){
         if(token){
+          localStorage.setItem("token", token)
           navigate("/Home")
         }else{
           toast.error("email or passwor is incorrect")
