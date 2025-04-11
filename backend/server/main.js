@@ -25,5 +25,5 @@ app.use("/api/users/" , userRoute)
 import productsRoute from '../routes/productsRoute.js'
 app.use("/api/products/", productsRoute)
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 6000;
 app.listen(port, () => console.log(`http://localhost:${port}`));
